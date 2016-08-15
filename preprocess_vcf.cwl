@@ -55,6 +55,9 @@ steps:
           out_vcf: File[]
         expression: |
             $({ out_vcf: filterForIndels(inputs.in_vcf) })
+        hints:
+            class: DockerRequirement
+            dockerPull: ubuntu
 
     normalize:
       run: normalize.cwl
