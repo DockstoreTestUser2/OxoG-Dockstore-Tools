@@ -56,8 +56,8 @@ steps:
         expression: |
             $({ out_vcf: filterForIndels(inputs.in_vcf) })
         hints:
-            class: DockerRequirement
-            dockerPull: ubuntu
+            - class: DockerRequirement
+              dockerPull: ubuntu
 
     normalize:
       run: normalize.cwl
